@@ -23,7 +23,8 @@ type: docker
 name: STAGE2
 
 steps:
-- name: hi
-  image: alpine
+- name: node
+  image: node
   commands:
-  - echo Namaste
+  - npm install
+  - node -v
