@@ -9,6 +9,7 @@ steps:
   - echo hello world
 
 - name: fr
+  pull: if-not-exists
   image: alpine
   commands:
   - echo bonjour monde
