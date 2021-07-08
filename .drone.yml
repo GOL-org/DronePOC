@@ -12,13 +12,6 @@ steps:
   image: alpine
   commands:
   - echo bonjour monde
-  
-kind: pipeline
-type: docker
-name: STAGE2 
-
-steps:
-- name: hi
-  image: alpine
-  commands:
-  - echo Namaste
+  when:
+   branch:
+   - dev/drone
