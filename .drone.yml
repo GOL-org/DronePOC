@@ -4,7 +4,7 @@ name: STAGE1
 
 steps:
 - name: en
-  image: alpine
+  image: node
   commands:
   - echo "Creating a greet file"
   - touch greet && echo GM >> greet
