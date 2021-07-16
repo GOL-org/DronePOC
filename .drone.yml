@@ -8,6 +8,7 @@ steps:
   commands:
   - echo "Creating a greet file"
   - touch greet && echo GM >> greet
-  - cat greet && pwd
+  - cat greet && pwd && ls -l
+  
 
 
