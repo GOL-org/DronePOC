@@ -6,26 +6,8 @@ steps:
 - name: en
   image: alpine
   commands:
-  - echo hello world
+  - echo "Creating a greet file"
+  - touch greet && echo GM >> greet
+  - cat greet && pwd
 
-- name: fr
-  pull: if-not-exists
-  image: alpine
-  commands:
-  - echo bonjour monde
-  when:
-   branch:
-   - master
 
----
-
-kind: pipeline
-type: docker
-name: STAGE2
-
-steps:
-- name: node
-  image: node
-  commands:
-  - npm install
-  - node -v
