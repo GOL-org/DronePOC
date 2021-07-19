@@ -1,14 +1,27 @@
 kind: pipeline
 type: docker
-name: STAGE1
+name: ALPINE
 
 steps:
 - name: en
-  image: node
+  image: alpine 
   commands:
   - echo "Creating a greet file"
   - touch greet && echo GM >> greet
   - cat greet && pwd && uname -a
+  - node -v
   
+---
 
+kind: pipeline
+type: docker
+name: NODEjs
 
+steps:
+- name: en
+  image: node 
+  commands:
+  - echo "Creating a greet file"
+  - touch greet && echo GA >> greet
+  - cat greet && pwd && uname -a
+  - node -v
