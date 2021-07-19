@@ -9,7 +9,7 @@ steps:
   - echo "Creating a greet file"
   - touch greet && echo GM >> greet
   - cat greet && pwd && uname -a
-  - node -v
+  - java -version && node -v
   
 ---
 
@@ -24,4 +24,4 @@ steps:
   - echo "Creating a greet file"
   - touch greet && echo GA >> greet
   - cat greet && pwd && uname -a
-  - node -v
+  - node -v && java -version
