@@ -9,10 +9,20 @@ steps:
   - ls -l
   - chmod 777 test test1.sh
   - ./test1.sh
-  - ls -l | grep *.tar
   
 - name: Show the tar file
   pull: if-not-exists
   image: alpine
   commands:
   - ls -l | grep *.tar 
+
+- name: Publish Artefact
+  image: athieriot/drone-artifactory
+  url: https://drone.jfrog.io/
+  username: vijayurfdon@gmail.com
+  password: Arin#1810
+  group_id: com.drone
+  artifact_id: test
+  version: 1.0-SNAPSHOT
+    files:
+      - *.tar
