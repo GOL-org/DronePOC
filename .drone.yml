@@ -7,5 +7,6 @@ steps:
   image: alpine 
   commands:
   - ls -l
-  - sudo ./test1.sh
+  - chmod 777 test test1.sh
+  - ./test1.sh
   - ls -l | grep *.tar
