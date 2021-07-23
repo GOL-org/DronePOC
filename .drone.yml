@@ -20,4 +20,3 @@ steps:
       from_secret: jfrog_pwd
   commands:
   - ls -l | grep *.tar 
-  - cat USERNAME && cat PASSWORD
