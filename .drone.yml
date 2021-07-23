@@ -10,3 +10,9 @@ steps:
   - chmod 777 test test1.sh
   - ./test1.sh
   - ls -l | grep *.tar
+  
+- name: Show the tar file
+  pull: if-not-exists
+  image: alpine
+  commands:
+  - ls -l | grep *.tar 
