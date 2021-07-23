@@ -13,16 +13,11 @@ steps:
 - name: Show the tar file
   pull: if-not-exists
   image: alpine
+  environment: 
+    USERNAME:
+      from_secret: jfrog_user
+    PASSWORD: 
+      from_secret: jfrog_pwd
   commands:
   - ls -l | grep *.tar 
-
-- name: Publish Artefact
-  image: athieriot/drone-artifactory
-  url: https://drone.jfrog.io/
-  username: vijayurfdon@gmail.com
-  password: Arin#1810
-  group_id: com.drone
-  artifact_id: test
-  version: 1.1
-    files:
-      - *.tar
+  - cat USERNAME && cat PASSWORD
