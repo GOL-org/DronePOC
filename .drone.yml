@@ -3,25 +3,9 @@ type: docker
 name: ALPINE
 
 steps:
-- name: en
+- name: Archive test folder
   image: alpine 
   commands:
-  - echo "Creating a greet file"
-  - touch greet && echo GM >> greet
-  - cat greet && pwd && uname -a
-  - java -version && node -v
-  
----
-
-kind: pipeline
-type: docker
-name: NODEjs
-
-steps:
-- name: en
-  image: node 
-  commands:
-  - echo "Creating a greet file"
-  - touch greet && echo GA >> greet
-  - cat greet && pwd && uname -a
-  - node -v && java -version
+  - ls -l
+  - ./test1.sh
+  - ls -l | grep *.tar
