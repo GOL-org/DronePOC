@@ -27,5 +27,6 @@ steps:
 - name: node
   image: node
   commands:
+  - echo Hello
   - npm install
   - node -v
