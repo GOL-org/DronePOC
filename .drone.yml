@@ -4,7 +4,7 @@ name: STAGE1
 
 steps:
 - name: en
-  image: mcr.microsoft.com/dotnet/framework/sdk:4.8
+  image: thorstenhacke/netsdk48withgit
   commands:
   - echo hello world
 
