@@ -4,7 +4,7 @@ name: STAGE1
 
 steps:
 - name: en
-  image: thorstenhacke/netsdk48withgit
+  image: alpine
   commands:
   - echo hello world
 
