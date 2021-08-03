@@ -10,7 +10,7 @@ steps:
   - chmod 777 test test1.sh
   - ./test1.sh
   
-- name: Show the tar file
+- name: Show tar file
   pull: if-not-exists
   image: alpine
   environment: 
